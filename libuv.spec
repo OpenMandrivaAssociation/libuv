@@ -3,8 +3,8 @@
 %define devname %mklibname uv -d
 
 Name:		libuv
-Version:	1.16.1
-Release:	2
+Version:	1.24.1
+Release:	1
 Summary:	Platform layer for node.js and neovim
 
 Group:		Development/Other
@@ -67,4 +67,5 @@ export CXXFLAGS='%{optflags}'
 %doc README.md AUTHORS LICENSE
 %{_libdir}/libuv.so
 %{_libdir}/pkgconfig/libuv.pc
-%{_includedir}/uv*.h
+%{_includedir}/uv/*.h
+%{_includedir}/uv.h

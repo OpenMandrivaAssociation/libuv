@@ -3,14 +3,14 @@
 %define devname %mklibname uv -d
 
 Name:		libuv
-Version:	1.24.1
+Version:	1.26.0
 Release:	1
 Summary:	Platform layer for node.js and neovim
 
 Group:		Development/Other
 # the licensing breakdown is described in detail in the LICENSE file
 License:	MIT and BSD and ISC
-URL:		http://nodejs.org/
+URL:		http://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}.tar.gz
 
 #BuildRequires:	gyp

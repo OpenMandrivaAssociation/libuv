@@ -3,7 +3,7 @@
 %define devname %mklibname uv -d
 
 Name:		libuv
-Version:	1.26.0
+Version:	1.29.0
 Release:	1
 Summary:	Platform layer for node.js and neovim
 
@@ -11,7 +11,7 @@ Group:		Development/Other
 # the licensing breakdown is described in detail in the LICENSE file
 License:	MIT and BSD and ISC
 URL:		http://libuv.org/
-Source0:	https://github.com/libuv/libuv/archive/v%{version}.tar.gz
+Source0:	https://github.com/libuv/libuv/archive/%{name}-%{version}.tar.gz
 
 #BuildRequires:	gyp
 
@@ -36,7 +36,7 @@ Requires:	%{libname} = %{EVRD}
 Development libraries for libuv.
 
 %prep
-%setup -q
+%autosetup -p1
 echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
         > m4/libuv-extra-automake-flags.m4
 libtoolize --install --copy --force --automake
@@ -49,10 +49,10 @@ automake --add-missing --copy --foreign
 export CFLAGS='%{optflags}'
 export CXXFLAGS='%{optflags}'
 %configure
-%make CC=%{__cc}
+%make_build CC=%{__cc}
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 # Tests are currently disabled because some require network access

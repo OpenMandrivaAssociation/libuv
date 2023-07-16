@@ -11,7 +11,7 @@ Group:		Development/Other
 # the licensing breakdown is described in detail in the LICENSE file
 License:	MIT and BSD and ISC
 URL:		http://libuv.org/
-Source0:	https://github.com/libuv/libuv/archive/v%{version}.tar.gz
+Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
 #BuildRequires:	gyp
 

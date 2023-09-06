@@ -49,7 +49,7 @@ automake --add-missing --copy --foreign
 export CFLAGS='%{optflags}'
 export CXXFLAGS='%{optflags}'
 %configure
-%make_build CC=%{__cc}
+%make_build CC="%{__cc}"
 
 %install
 %make_install

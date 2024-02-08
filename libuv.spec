@@ -1,16 +1,17 @@
 %define major 1
-%define libname %mklibname uv %{major}
+%define libname %mklibname uv
+%define oldlibname %mklibname uv 1
 %define devname %mklibname uv -d
 
 Name:		libuv
-Version:	1.47.0
+Version:	1.48.0
 Release:	1
 Summary:	Platform layer for node.js and neovim
 
 Group:		Development/Other
 # the licensing breakdown is described in detail in the LICENSE file
 License:	MIT and BSD and ISC
-URL:		http://libuv.org/
+URL:		https://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
 #BuildRequires:	gyp
@@ -23,6 +24,7 @@ It is currently used by node.js and neovim.
 %package -n %{libname}
 Summary:	%{summary}
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n	%{libname}
 %{summary}.

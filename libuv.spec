@@ -14,7 +14,7 @@ License:	MIT and BSD and ISC
 URL:		https://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
-#BuildRequires:	gyp
+BuildRequires:	libtool
 
 %description
 libuv is a new platform layer for Node providing a cross-platform event loop.

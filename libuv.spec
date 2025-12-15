@@ -15,6 +15,7 @@ URL:		https://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	libtool
+BuildRequires:	m4
 
 %description
 libuv is a new platform layer for Node providing a cross-platform event loop.

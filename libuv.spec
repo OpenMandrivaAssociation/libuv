@@ -14,6 +14,7 @@ License:	MIT and BSD and ISC
 URL:		https://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	m4
 

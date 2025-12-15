@@ -17,6 +17,7 @@ Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.t
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	m4
+BuildRequirea:	make
 
 %description
 libuv is a new platform layer for Node providing a cross-platform event loop.

@@ -4,7 +4,7 @@
 %define devname %mklibname uv -d
 
 Name:		libuv
-Version:	1.51.0
+Version:	1.52.0
 Release:	1
 Summary:	Platform layer for node.js and neovim
 
@@ -15,10 +15,8 @@ URL:		https://libuv.org/
 Source0:	https://github.com/libuv/libuv/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	autoconf
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	m4
 BuildRequires:	make
 
@@ -47,7 +45,7 @@ Development libraries for libuv.
 %autosetup -p1
 echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
         > m4/libuv-extra-automake-flags.m4
-libtoolize --install --copy --force --automake
+slibtoolize --install --copy --force --automake
 aclocal -I m4
 autoconf
 automake --add-missing --copy --foreign
